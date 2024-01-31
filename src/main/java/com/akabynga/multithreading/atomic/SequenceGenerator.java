@@ -10,8 +10,7 @@ public class SequenceGenerator {
     public SequenceGenerator() {
         if (MULTIPLIER == null)
             MULTIPLIER = BigInteger.valueOf(2);
-        element = new AtomicReference<BigInteger>(
-                BigInteger.ONE);
+        element = new AtomicReference<>(BigInteger.ONE);
     }
 
     public BigInteger next() {

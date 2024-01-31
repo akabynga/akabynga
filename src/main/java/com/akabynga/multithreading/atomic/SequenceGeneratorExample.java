@@ -6,14 +6,14 @@ import java.util.List;
 public class SequenceGeneratorExample {
     public static void main(String[] args) {
         SequenceGenerator sg = new SequenceGenerator();
-        List<Sequence> sequences = new ArrayList<Sequence>();
+        List<Sequence> sequences = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
             Sequence seq = new Sequence(i + 1, 3, sg);
             sequences.add(seq);
         }
-        System.out.println("\nРасчет последовательностей\n");
+        System.out.println("\nпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ\n");
         int summa;
-        // Ожидания завершения потоков
+        // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ
         do {
             summa = 0;
             for (Sequence sequence : sequences) {
@@ -27,7 +27,7 @@ public class SequenceGeneratorExample {
             } catch (InterruptedException ignored) {
             }
         } while (summa < sequences.size());
-        System.out.println("\n\nРабота потоков завершена");
+        System.out.println("\n\nпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
         System.exit(0);
     }
 }
