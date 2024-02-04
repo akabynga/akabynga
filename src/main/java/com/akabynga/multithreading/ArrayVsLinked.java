@@ -10,7 +10,7 @@ public class ArrayVsLinked {
         ArrayList<Integer> arrayList = new ArrayList<>();
 
         Random random = new Random();
-        for (int i = 0; i < 1_000_000; i++) {
+        for (int i = 0; i < 100_000_000; i++) {
             Integer integer = random.nextInt(1000);
             linkedList.add(integer);
             arrayList.add(integer);
