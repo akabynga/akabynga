@@ -21,7 +21,7 @@ public class PriorityTestRunner {
 
         @Override
         public void run() {
-            IntStream.range(RANGE_MINIMAL_BORDER, RANGE_MAXIMAL_BORDER).forEach(value -> System.out.println(value));
+            IntStream.range(RANGE_MINIMAL_BORDER, RANGE_MAXIMAL_BORDER).forEach(System.out::println);
         }
     }
 }
