@@ -17,7 +17,7 @@ public class WorkerDemo {
 
         workers.forEach(Thread::start);
         countDownLatch.await();
-        outputScraper.add("Latch released");
+        outputScraper.add("Latch released!");
         System.out.println(outputScraper);
     }
 }
