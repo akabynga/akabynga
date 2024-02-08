@@ -1,8 +1,6 @@
 package com.akabynga.multithreading.basic.notifyall.messagetransport.broker;
 
-import com.akabynga.multithreading.basic.notifyall.messagetransport.consumer.MessageConsumingTask;
 import com.akabynga.multithreading.basic.notifyall.messagetransport.model.Message;
-import com.akabynga.multithreading.basic.notifyall.messagetransport.producer.MessageProducingTask;
 
 import java.util.ArrayDeque;
 import java.util.Optional;
@@ -24,6 +22,7 @@ public final class MessageBroker {
     public synchronized void produce(final Message message) {
         try {
             while (this.messagesToBeConsumed.size() >= this.maxStoreMessages) {
+//                super.wait(1000);
                 super.wait();
             }
             this.messagesToBeConsumed.add(message);
@@ -37,11 +36,12 @@ public final class MessageBroker {
     public synchronized Optional<Message> consume() {
         try {
             while (this.messagesToBeConsumed.isEmpty()) {
+//                super.wait(1000);
                 super.wait();
             }
             Message consumedMessage = this.messagesToBeConsumed.poll();
             System.out.printf(MESSAGE_OF_MESSAGE_IS_CONSUMED, consumedMessage);
-            super.notifyAll();
+            super.notifyAll ();
             return Optional.ofNullable(consumedMessage);
         } catch (InterruptedException e) {
             Thread.currentThread().interrupt();

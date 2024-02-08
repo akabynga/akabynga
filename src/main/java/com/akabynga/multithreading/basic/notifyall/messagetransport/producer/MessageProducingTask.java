@@ -18,14 +18,9 @@ public final class MessageProducingTask implements Runnable {
 
     @Override
     public void run() {
-        try {
-            while (!Thread.currentThread().isInterrupted()) {
-                final Message producedMessage = this.messageFactory.create();
-                TimeUnit.SECONDS.sleep(SECONDS_DURATION_TO_SLEEP_BEFORE_PRODUCING);
-                this.messageBroker.produce(producedMessage);
-            }
-        } catch (InterruptedException e) {
-            Thread.currentThread().interrupt();
+        while (!Thread.currentThread().isInterrupted()) {
+            final Message producedMessage = this.messageFactory.create();
+            this.messageBroker.produce(producedMessage);
         }
     }
 
