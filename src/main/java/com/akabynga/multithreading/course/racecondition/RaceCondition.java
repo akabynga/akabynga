@@ -1,10 +1,9 @@
-package com.akabynga.multithreading.course.raceondition;
+package com.akabynga.multithreading.course.racecondition;
 
-import java.util.concurrent.atomic.AtomicLong;
 import java.util.stream.IntStream;
 
-public class RaceConditionFixed {
-    private static final AtomicLong counter = new AtomicLong();
+public class RaceCondition {
+    private static int counter = 0;
     private static final int INCREMENT_AMOUNT_FIRST_THREAD = 500;
     private static final int INCREMENT_AMOUNT_SECOND_THREAD = 600;
 
@@ -23,6 +22,6 @@ public class RaceConditionFixed {
     }
 
     private static Thread createIncrementCounterThread(final int incrementAmount) {
-        return new Thread(() -> IntStream.range(0, incrementAmount).forEach(i -> counter.incrementAndGet()));
+        return new Thread(() -> IntStream.range(0, incrementAmount).forEach(i -> counter++));
     }
 }

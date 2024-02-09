@@ -1,4 +1,4 @@
-package com.akabynga.multithreading.course.raceondition;
+package com.akabynga.multithreading.course.racecondition;
 
 import com.akabynga.multithreading.course.ThreadUtil;
 
