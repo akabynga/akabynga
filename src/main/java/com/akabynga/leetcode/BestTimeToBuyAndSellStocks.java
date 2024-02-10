@@ -9,19 +9,19 @@ public class BestTimeToBuyAndSellStocks {
     }
 
     public static int maxProfit(int[] prices) {
-        int lsf = prices[0]; // least so far
-        int op = 0; // overall profit
-        int pist = 0; // profit if sold today
+        int leastSoFar = prices[0];
+        int overallProfit = 0;
+        int profitIfSoldToday = 0;
 
         for (int i = 1; i < prices.length; i++) {
-            if (prices[i] < lsf) { // if we found new buy value which is smaller than previous one
-                lsf = prices[i]; // update our least so far
+            if (prices[i] < leastSoFar) { // if we found new buy value which is smaller than previous one
+                leastSoFar = prices[i]; // update our least so far
             }
-            pist = prices[i] - lsf; // calculating profit if sold today by, Buy - sell
-            if (op < pist) { // if pist is more than our previous overall profit
-                op = pist; // update overall profit
+            profitIfSoldToday = prices[i] - leastSoFar; // calculating profit if sold today by, Buy - sell
+            if (overallProfit < profitIfSoldToday) { // if pist is more than our previous overall profit
+                overallProfit = profitIfSoldToday; // update overall profit
             }
         }
-        return op; // return op
+        return overallProfit;
     }
 }
