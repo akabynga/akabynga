@@ -7,7 +7,6 @@ import java.util.concurrent.locks.Lock;
 public abstract class AbstractCounter {
     private long value;
 
-
     public final OptionalLong getValue() {
         getReadLock().lock();
         try {
