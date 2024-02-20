@@ -1,15 +1,17 @@
 package com.akabynga.leetcode;
 
+import com.akabynga.leetcode.utils.TreeNode;
+
 public class MaximumDepthOfBinaryTree {
     public static void main(String[] args) {
 
     }
 
-    public int maxDepth(BinaryTreeInorderTraversal.TreeNode root) {
+    public int maxDepth(TreeNode root) {
         return getMaxDepth(root, 0);
     }
 
-    public int getMaxDepth(BinaryTreeInorderTraversal.TreeNode node, int depth) {
+    public int getMaxDepth(TreeNode node, int depth) {
         if (node == null) {
             return depth;
         }
