@@ -1,8 +1,6 @@
 package com.akabynga.collections.iterator;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.LinkedList;
 
 public class CopyDemo {
     public static void main(String[] args) {
