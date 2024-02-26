@@ -1,7 +1,7 @@
 package com.akabynga.leetcode;
 
 
-import javax.swing.tree.TreeNode;
+import com.akabynga.leetcode.utils.TreeNode;
 
 public class CountCompleteTreeNodes {
 
