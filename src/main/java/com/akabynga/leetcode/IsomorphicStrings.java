@@ -1,8 +1,5 @@
 package com.akabynga.leetcode;
 
-import java.util.HashMap;
-import java.util.Map;
-
 public class IsomorphicStrings {
 
     public static void main(String[] args) {
