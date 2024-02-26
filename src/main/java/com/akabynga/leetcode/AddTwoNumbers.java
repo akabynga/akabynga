@@ -1,5 +1,7 @@
 package com.akabynga.leetcode;
 
+import com.akabynga.leetcode.utils.ListNode;
+
 import java.util.LinkedList;
 
 public class AddTwoNumbers {
@@ -37,6 +39,7 @@ public class AddTwoNumbers {
 
         print(l1);
         print(l2);
+        print(addTwoNumbers_1(l1, l2));
         print(addTwoNumbers(l1, l2));
     }
 
@@ -83,20 +86,34 @@ public class AddTwoNumbers {
         return result;
     }
 
-    public static class ListNode {
-        int val;
-        ListNode next;
 
-        ListNode() {
-        }
+    public static ListNode addTwoNumbers_1(ListNode l1, ListNode l2) {
+        return convertToList(getNumberFromList(l1) + getNumberFromList(l2));
+    }
 
-        ListNode(int val) {
-            this.val = val;
-        }
+    public static ListNode convertToList(int number) {
 
-        ListNode(int val, ListNode next) {
-            this.val = val;
-            this.next = next;
+        ListNode node = new ListNode();
+        ListNode head = node;
+        do {
+            node.val = number % 10;
+            node.next = new ListNode();
+            node = node.next;
+            number /= 10;
+        } while (number != 0);
+
+        return head;
+    }
+
+    public static int getNumberFromList(ListNode node) {
+        int number = 0;
+        int multiplier = 1;
+        ListNode current = node;
+        while (current != null) {
+            number += current.val * multiplier;
+            current = current.next;
+            multiplier *= 10;
         }
+        return number;
     }
 }
