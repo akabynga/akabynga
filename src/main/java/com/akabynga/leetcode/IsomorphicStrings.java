@@ -16,6 +16,7 @@ public class IsomorphicStrings {
         int[] tToS = new int[128];
 
         for (int i = 0; i < t.length(); i++) {
+
             if (sToT[t.charAt(i)] != tToS[s.charAt(i)]) {
                 return false;
             }
