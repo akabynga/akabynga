@@ -3,10 +3,10 @@ package com.akabynga.leetcode;
 public class BackspaceStringCompare {
 
     public static void main(String[] args) {
-        String s = "a##c";
-        String t = "#a#c";
+        String s = "bxj##tw";
+        String t = "bxj###tw";
 
-        System.out.println(backspaceCompare(s, t));
+        System.out.println(backspaceCompare_1(s, t));
 //        System.out.println(buildString(s));
 //        System.out.println(buildString(t));
 //        System.out.println(backspaceCompare_1(s, t));
