@@ -1,5 +1,8 @@
 package com.akabynga.leetcode;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class ContainerWithMostWater {
     public static void main(String[] args) {
         int[] array = {1, 8, 6, 2, 5, 4, 8, 3, 7};
@@ -21,5 +24,31 @@ public class ContainerWithMostWater {
             }
         }
         return maxArea;
+    }
+
+    public boolean isIsomorphic(String source, String target) {
+
+        if (source.length() != target.length()) {
+            return false;
+        }
+
+        Map<Character, Character> mapSourceToTarget = new HashMap<>();
+        Map<Character, Character> mapTargetToSource = new HashMap<>();
+
+        for (int i = 0; i < target.length(); i++) {
+
+            if (!mapTargetToSource.containsKey(target.charAt(i))) {
+                mapTargetToSource.put(target.charAt(i), source.charAt(i));
+            }
+            if (!mapSourceToTarget.containsKey(source.charAt(i))) {
+                mapSourceToTarget.put(source.charAt(i), target.charAt(i));
+            }
+
+            if (mapTargetToSource.get(target.charAt(i)) != source.charAt(i) || mapSourceToTarget.get(source.charAt(i)) != target.charAt(i)) {
+                return false;
+            }
+        }
+
+        return true;
     }
 }
