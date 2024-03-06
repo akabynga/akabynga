@@ -26,12 +26,16 @@ public class ListNode {
     }
 
     public static ListNode buildList(int numberOfNodes) {
-        if (numberOfNodes < 0) {
+        return buildList(0, numberOfNodes);
+    }
+
+    public static ListNode buildList(int start, int end) {
+        if (end - start < 0) {
             return null;
         }
-        ListNode node = new ListNode(0);
+        ListNode node = new ListNode(start);
         ListNode currentNode = node;
-        for (int i = 1; i <= numberOfNodes; i++) {
+        for (int i = start + 1; i <= end; i++) {
             currentNode.next = new ListNode(i);
             currentNode = currentNode.next;
         }
