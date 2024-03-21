@@ -1,8 +1,23 @@
 package com.akabynga.faang;
 
+import java.util.PriorityQueue;
 import java.util.Random;
 
 public class KthLargestElementInArray {
+
+
+    public static int findKthLargest_PriorityQueue(int[] nums, int k) {
+        PriorityQueue<Integer> queue = new PriorityQueue<>(k + 1);
+
+        for (int i = 0; i < nums.length; i++) {
+            queue.add(nums[i]);
+            if (queue.size() > k) {
+                queue.poll();
+            }
+        }
+
+        return queue.peek();
+    }
 
     public static int findKthLargest(int[] nums, int k) {
 

@@ -21,4 +21,16 @@ public class KthLargestElementInArrayTest {
         // assert
         Assertions.assertEquals(5, output);
     }
+
+    @Test
+    public void findKthLargestTest_priorityQueue() {
+        // arrange
+        int[] array = {3, 2, 1, 5, 6, 4};
+        int k = 2;
+        // act
+        int output = KthLargestElementInArray.findKthLargest_PriorityQueue(array, k);
+
+        // assert
+        Assertions.assertEquals(5, output);
+    }
 }
