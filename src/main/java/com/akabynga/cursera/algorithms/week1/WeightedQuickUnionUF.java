@@ -10,8 +10,8 @@ package com.akabynga.cursera.algorithms.week1; /********************************
  *
  ******************************************************************************/
 
-import edu.princeton.cs.algs4.StdIn;
-import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.introcs.StdIn;
+import edu.princeton.cs.introcs.StdOut;
 
 /**
  * The {@code WeightedQuickUnionUF} class represents a <em>union–find data type</em>
@@ -55,7 +55,7 @@ import edu.princeton.cs.algs4.StdOut;
  * case. The <em>count</em> operation takes &Theta;(1) time.
  * p>
  * For alternative implementations of the same API, see
- * {@link UF}, {@link QuickFindUF}, and {@link QuickUnionUF}.
+ * {@link edu.princeton.cs.algorithms.UF}, {@link edu.princeton.cs.algorithms.QuickFindUF}, and {@link QuickUnionUF}.
  * For additional documentation, see
  * <a href="https://algs4.cs.princeton.edu/15uf">Section 1.5</a> of
  * <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.

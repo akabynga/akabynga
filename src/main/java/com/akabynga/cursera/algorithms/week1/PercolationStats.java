@@ -1,8 +1,8 @@
 package com.akabynga.cursera.algorithms.week1;
 
-import edu.princeton.cs.algs4.StdOut;
-import edu.princeton.cs.algs4.StdRandom;
-import edu.princeton.cs.algs4.StdStats;
+import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.introcs.StdRandom;
+import edu.princeton.cs.introcs.StdStats;
 
 public class PercolationStats {
     private static final double CONFIDENCE_95 = 1.96;
@@ -19,8 +19,8 @@ public class PercolationStats {
         for (int experimentNum = 0; experimentNum < numberOfExperiments; experimentNum++) {
             Percolation pr = new Percolation(n);
             while (!pr.percolates()) {
-                int row = StdRandom.uniformInt(1, n + 1);
-                int col = StdRandom.uniformInt(1, n + 1);
+                int row = StdRandom.uniform(1, n + 1);
+                int col = StdRandom.uniform(1, n + 1);
                 if (!pr.isOpen(row, col)) {
                     pr.open(row, col);
                 }

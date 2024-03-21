@@ -1,7 +1,7 @@
 package com.akabynga.cursera.algorithms.week1;
 
-import edu.princeton.cs.algs4.StdOut;
-import edu.princeton.cs.algs4.StdRandom;
+import edu.princeton.cs.introcs.StdOut;
+import edu.princeton.cs.introcs.StdRandom;
 
 /**
  * The {@code DoublingRatio} class provides a client for measuring
@@ -31,7 +31,7 @@ public class DoublingRatio {
     public static double timeTrial(int n) {
         int[] a = new int[n];
         for (int i = 0; i < n; i++) {
-            a[i] = StdRandom.uniformInt(-MAXIMUM_INTEGER, MAXIMUM_INTEGER);
+            a[i] = StdRandom.uniform(-MAXIMUM_INTEGER, MAXIMUM_INTEGER);
         }
         Stopwatch timer = new Stopwatch();
         int ignore = ThreeSum.count(a);

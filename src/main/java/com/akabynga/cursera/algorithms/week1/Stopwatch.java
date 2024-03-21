@@ -1,6 +1,6 @@
 package com.akabynga.cursera.algorithms.week1;
 
-import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.introcs.StdOut;
 
 public class Stopwatch {
 

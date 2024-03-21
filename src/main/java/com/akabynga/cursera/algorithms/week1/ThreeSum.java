@@ -1,7 +1,7 @@
 package com.akabynga.cursera.algorithms.week1;
 
-import edu.princeton.cs.algs4.In;
-import edu.princeton.cs.algs4.StdOut;
+import edu.princeton.cs.introcs.In;
+import edu.princeton.cs.introcs.StdOut;
 
 /**
  * The {@code ThreeSum} class provides static methods for counting

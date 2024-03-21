@@ -1,7 +1,5 @@
 package com.akabynga.cursera.algorithms.week1;
 
-import edu.princeton.cs.algs4.WeightedQuickUnionUF;
-
 public class Percolation {
 
     private WeightedQuickUnionUF uf;

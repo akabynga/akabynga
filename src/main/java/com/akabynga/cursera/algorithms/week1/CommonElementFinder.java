@@ -1,8 +1,5 @@
 package com.akabynga.cursera.algorithms.week1;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class CommonElementFinder {
     public static Integer findCommonElement(int[] arr1, int[] arr2, int[] arr3) {
         int i = 0, j = 0, k = 0;
