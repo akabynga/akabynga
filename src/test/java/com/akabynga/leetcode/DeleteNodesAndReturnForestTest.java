@@ -29,7 +29,7 @@ public class DeleteNodesAndReturnForestTest {
         System.out.println(result);
 
         // assert
-//        Assertions.assertEquals(expectedResult, result);
+        Assertions.assertEquals(expectedResult, result);
 
     }
 }
