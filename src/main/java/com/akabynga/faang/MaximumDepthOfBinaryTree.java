@@ -1,9 +1,8 @@
-package com.akabynga.leetcode;
+package com.akabynga.faang;
 
 import com.akabynga.leetcode.utils.TreeNode;
 
 public class MaximumDepthOfBinaryTree {
-
     public int maxDepth(TreeNode root) {
         return getMaxDepth(root, 0);
     }

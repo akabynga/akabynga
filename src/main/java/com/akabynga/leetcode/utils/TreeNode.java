@@ -90,7 +90,7 @@ public class TreeNode {
         LinkedList<TreeNode> nodes = new LinkedList<>();
         nodes.push(parent);
 
-        while (!nodes.isEmpty()) {
+        while (!numbers.isEmpty()) {
             TreeNode node = nodes.removeFirst();
 
             if (node == null) {
@@ -98,11 +98,13 @@ public class TreeNode {
             }
 
             if (!numbers.isEmpty()) {
-                node.left = numbers.getFirst() == null ? null : new TreeNode(numbers.removeFirst());
+                Integer value = numbers.removeFirst();
+                node.left = value == null ? null : new TreeNode(value);
                 nodes.addLast(node.left);
             }
             if (!numbers.isEmpty()) {
-                node.right = numbers.getFirst() == null ? null : new TreeNode(numbers.removeFirst());
+                Integer value = numbers.removeFirst();
+                node.right = value == null ? null : new TreeNode(value);
                 nodes.addLast(node.right);
             }
         }
