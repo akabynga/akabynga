@@ -35,6 +35,28 @@ public class TreeNode {
      * 4   5   6   7
      */
 
+    public static int countCompleteTreeHeight(TreeNode root) {
+
+        int height = 0;
+        while (root != null && root.left != null) {
+            height++;
+            root = root.left;
+        }
+
+        return height;
+    }
+
+    public static int calculateLevelNodes(int level) {
+        if (level == 0) {
+            return 0;
+        }
+        return (int) Math.pow(2, level - 1);
+    }
+
+    public static int calculateMaxCountNodesInFullCompleteTree(int height) {
+        return (int) Math.pow(2, height) - 1;
+    }
+
 
     public static void displayVerticalOrder(TreeNode root) {
         _displayVerticalOrder(root);

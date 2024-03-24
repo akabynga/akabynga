@@ -1,5 +1,4 @@
-package com.akabynga.leetcode;
-
+package com.akabynga.faang;
 
 import com.akabynga.leetcode.utils.TreeNode;
 
@@ -50,17 +49,5 @@ public class CountCompleteTreeNodes {
             count++;
         }
         return node != null;
-    }
-
-    public int countNodes_notEfficient(TreeNode node) {
-        return traverse(node);
-    }
-
-    public int traverse(TreeNode node) {
-        if (node == null) {
-            return 0;
-        }
-
-        return traverse(node.left) + traverse(node.right) + 1;
     }
 }
