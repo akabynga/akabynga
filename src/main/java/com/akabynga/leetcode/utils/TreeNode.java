@@ -1,7 +1,7 @@
 package com.akabynga.leetcode.utils;
 
-import java.util.Arrays;
-import java.util.LinkedList;
+import java.util.*;
+import java.util.function.Consumer;
 
 public class TreeNode {
     public int val;
@@ -24,6 +24,65 @@ public class TreeNode {
     @Override
     public String toString() {
         return String.valueOf(val);
+    }
+
+    public void depthFirstSearchPreOrder(Consumer<Integer> consumer) {
+        traversePreOrder(this, consumer);
+    }
+
+    private void traversePreOrder(TreeNode node, Consumer<Integer> consumer) {
+        if (node == null) {
+            return;
+        }
+        consumer.accept(node.val);
+        traversePreOrder(node.left, consumer);
+        traversePreOrder(node.right, consumer);
+    }
+
+    public void depthFirstSearchInOrder(Consumer<Integer> consumer) {
+        traverseInOrder(this, consumer);
+    }
+
+    private void traverseInOrder(TreeNode node, Consumer<Integer> consumer) {
+        if (node == null) {
+            return;
+        }
+        traverseInOrder(node.left, consumer);
+        consumer.accept(node.val);
+        traverseInOrder(node.right, consumer);
+    }
+
+    public void depthFirstSearchPostOrder(Consumer<Integer> consumer) {
+        traversePostOrder(this, consumer);
+    }
+
+    private void traversePostOrder(TreeNode node, Consumer<Integer> consumer) {
+        if (node == null) {
+            return;
+        }
+        traversePostOrder(node.left, consumer);
+        traversePostOrder(node.right, consumer);
+        consumer.accept(node.val);
+    }
+
+    public void breadthFirstSearch(Consumer<Integer> consumer) {
+
+        Queue<TreeNode> queue = new LinkedList<>();
+        queue.add(this);
+
+        while (!queue.isEmpty()) {
+            TreeNode node = queue.poll();
+            if (node == null) {
+                continue;
+            }
+            if (node.left != null) {
+                queue.add(node.left);
+            }
+            if (node.right != null) {
+                queue.add(node.right);
+            }
+            consumer.accept(node.val);
+        }
     }
 
     /**
