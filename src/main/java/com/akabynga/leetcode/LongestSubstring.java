@@ -1,5 +1,9 @@
 package com.akabynga.leetcode;
 
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
 
 //        Example 1:
 //        Input: s = "abcabcbb"
@@ -10,11 +14,6 @@ package com.akabynga.leetcode;
 //        Input: s = "bbbbb"
 //        Output: 1
 //        Explanation: The answer is "b", with the length of 1.
-
-import java.util.HashMap;
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
 
 //        Example 3:
 //        Input: s = "pwwkew"
@@ -28,9 +27,11 @@ public class LongestSubstring {
     }
 
     public static int lengthOfLongestSubstring(String string) {
+
         Set<Character> set = new HashSet<>();
         int max = 0;
         int left = 0;
+
         for (int right = 0; right < string.length(); right++) {
             while (!set.add(string.charAt(right))) {
                 set.remove(string.charAt(left++));
