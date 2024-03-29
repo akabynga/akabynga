@@ -20,8 +20,8 @@ public class TimeNeededInformAllEmployees {
 
     public static int numOfMinutes(int n, int headID, int[] manager, int[] informTime) {
         int res = 0;
-        for(int i = 0; i < n; i++) {
-            if(informTime[i] != 0) {
+        for (int i = 0; i < n; i++) {
+            if (informTime[i] != 0) {
                 res = Math.max(res, dfs(informTime, manager, i));
             }
         }
@@ -29,7 +29,7 @@ public class TimeNeededInformAllEmployees {
     }
 
     private static int dfs(int[] informTime, int[] manager, int curr) {
-        if(manager[curr] != -1) {
+        if (manager[curr] != -1) {
             informTime[curr] += dfs(informTime, manager, manager[curr]);
             manager[curr] = -1;
         }
