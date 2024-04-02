@@ -20,4 +20,35 @@ public class MinCostClimbingStairsTest {
         // assert
         Assertions.assertEquals(expected, actual);
     }
+
+    @Test
+    public void givenCostArray_findCostClimbingStairsUsingBottomUpRecursiveApproach_thenReturnMinCost() {
+
+        // arrange
+        MinCostClimbingStairs solution = new MinCostClimbingStairs();
+        int[] cost = {10, 15, 20};
+        int expected = 15;
+
+        // act
+        int actual = solution.minCostClimbingStairs_bottomUpRecursive(cost);
+
+        // assert
+        Assertions.assertEquals(expected, actual);
+    }
+
+    @Test
+    public void givenCostArray_findCostClimbingStairsUsingBottomUpApproach_thenReturnMinCost() {
+
+        // arrange
+        MinCostClimbingStairs solution = new MinCostClimbingStairs();
+        int[] cost = {10, 15, 20};
+        int expected = 15;
+
+        // act
+        int actual = solution.minCostClimbingStairs_bottomUp(cost);
+
+        // assert
+        Assertions.assertEquals(expected, actual);
+    }
+
 }
