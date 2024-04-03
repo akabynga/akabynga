@@ -4,13 +4,6 @@ import java.util.Arrays;
 
 public class HouseRobber {
 
-
-    public static void main(String[] args) {
-        HouseRobber solution = new HouseRobber();
-        int[] nums = {1, 2, 3, 1};
-        System.out.println(solution.rob(nums));
-    }
-
     public int rob(int[] nums) {
         int current = 0;
         int next = 0;
