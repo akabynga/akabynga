@@ -31,7 +31,7 @@ public class LongestPalindromicSubsequence {
         if (s.charAt(i) == s.charAt(j)) {
             memo[i][j] = 2 + longestPalindromeSubseq(s, memo, i + 1, j - 1);
         } else {
-            memo[i][j] = Math.max(longestPalindromeSubseq(s, memo, i + 1, j), longestPalindromeSubseq(s, memo, 1, j - 1));
+            memo[i][j] = Math.max(longestPalindromeSubseq(s, memo, i + 1, j), longestPalindromeSubseq(s, memo, i, j - 1));
         }
         return memo[i][j];
     }
