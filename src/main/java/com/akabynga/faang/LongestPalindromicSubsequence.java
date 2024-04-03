@@ -4,13 +4,6 @@ import java.util.Arrays;
 
 public class LongestPalindromicSubsequence {
 
-    public static void main(String[] args) {
-        LongestPalindromicSubsequence solution = new LongestPalindromicSubsequence();
-        String s = "bbbab";
-
-        System.out.println(solution.longestPalindromeSubseq(s));
-    }
-
     public int longestPalindromeSubseq(String s) {
 
         int[][] dp = new int[s.length()][s.length()];
