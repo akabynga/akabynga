@@ -1,8 +1,5 @@
 package com.akabynga.faang;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Trie {
 
     private final Node[] nodes;
@@ -21,6 +18,7 @@ public class Trie {
             nodes[position] = new Node();
             if (word.length() == 1) {
                 nodes[position].end = true;
+                return;
             }
         }
         insert(word, nodes[position], 1);
