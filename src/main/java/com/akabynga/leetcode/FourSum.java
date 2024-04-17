@@ -2,7 +2,7 @@ package com.akabynga.leetcode;
 
 import java.util.*;
 
-public class _FourSum {
+public class FourSum {
 
 
     public static void main(String[] args) {
@@ -12,10 +12,6 @@ public class _FourSum {
 
         System.out.println(fourSum(nums, target));
     }
-
-//    public static List<List<Integer>> fourSum(int[] nums, int target) {
-//
-//    }
 
     public static List<List<Integer>> fourSum(int[] nums, int target) {
         Arrays.sort(nums);
