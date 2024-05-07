@@ -41,18 +41,10 @@ public class MedianOfTwoSortedArrays {
 
 
     private int getMax(int[] nums, int partition) {
-        if (partition == 0) {
-            return Integer.MIN_VALUE;
-        } else {
-            return nums[partition - 1];
-        }
+        return partition == 0 ? Integer.MIN_VALUE : nums[partition - 1];
     }
 
     private int getMin(int[] nums, int partition) {
-        if (partition == nums.length) {
-            return Integer.MAX_VALUE;
-        } else {
-            return nums[partition];
-        }
+        return partition == nums.length ? Integer.MAX_VALUE : nums[partition];
     }
 }
