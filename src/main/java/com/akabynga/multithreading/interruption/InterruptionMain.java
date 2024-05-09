@@ -5,7 +5,7 @@ public class InterruptionMain {
         ExampleThread thread = new ExampleThread();
         thread.start();
 
-        Thread.sleep(5000); // Ждем 5 секунд
+        Thread.sleep(1000); // Ждем 5 секунд
 
         thread.interrupt(); // Прерываем поток
     }
