@@ -1,3 +1,3 @@
 package com.akabynga.kotlin.coursera.week1
 
-enum class Color { BLUE, ORANGE, RED }
+enum class Color { BLUE, ORANGE, RED, YELLOW, GREEN, INDIGO, VIOLET }

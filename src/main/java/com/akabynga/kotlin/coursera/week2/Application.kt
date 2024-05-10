@@ -32,3 +32,6 @@ fun displaySeparator(character: Char = '*', size: Int = 10) {
 fun max(a: Int, b: Int) = if (a > b) a else b
 
 fun displayMax(a: Int, b: Int) = println(max(a, b))
+
+@JvmOverloads
+fun sum(a: Int = 0, b: Int = 0, c: Int = 0) = a + b + c
